@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funny Personality Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Personallity Calculator?</h1>
+    <div id="question-container">
+      <p id="question"></p>
+      <div id="options">
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+      </div>
+    </div>
+    <button id="next-btn">Next</button>
+  </div>
+
+  <div id="result-container" class="hidden">
+    <h2>Calculating your personality...</h2>
+    <div id="drumroll"></div>
+    <img id="result-image" src="Img/guessing.png" alt="Result Image">
+    <p id="result-text"></p>
+  </div>
+
+  <!-- Audio elements -->
+  <audio id="drumroll-sound" src="audio/drumroll.mp3"></audio>
+  <!-- <audio id="cheering-sound" src="cheering.mp3"></audio> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
