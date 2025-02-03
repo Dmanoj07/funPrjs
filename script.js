@@ -68,10 +68,24 @@ const questions = [
     optionsElement.innerHTML = q.options.map((option, index) => `
       <button class="option" onclick="selectOption(${index})">${option}</button>
     `).join('');
+    
+    nextButton.style.display = 'none'; // Hide Next button initially
+  
+    // Change button text to "Calculate" on the last question
+    if (currentQuestion === questions.length - 1) {
+      nextButton.innerText = "Calculate";
+    } else {
+      nextButton.innerText = "Next";
+    }
   }
+  
   
   function selectOption(index) {
     score += questions[currentQuestion].scores[index];
+    nextButton.style.display = 'block'; // Show Next button after selecting an option
+  }
+  
+  function nextQuestion() {
     currentQuestion++;
     if (currentQuestion < questions.length) {
       showQuestion();
@@ -106,5 +120,5 @@ const questions = [
     }, 4000); // Adjust the timeout to match the length of your drumroll sound
   }
   
-  nextButton.addEventListener('click', showQuestion);
+  nextButton.addEventListener('click', nextQuestion);
   showQuestion();

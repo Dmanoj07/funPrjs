@@ -40,6 +40,7 @@ body {
   }
   
   #next-btn {
+    justify-content: center;
     padding: 10px 20px;
     background-color: #ff6f61;
     border: none;
@@ -52,6 +53,13 @@ body {
   #next-btn:hover {
     background-color: #ff4a3d;
   }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    margin-top: 20px;
+  }
+  
   
   .hidden {
     display: none;
